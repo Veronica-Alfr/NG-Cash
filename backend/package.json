@@ -1,0 +1,40 @@
+{
+  "name": "ng-cash",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build && node ./dist/index.ts",
+    "dev": "tsnd index.ts",
+    "build": "tsc",
+    "db:reset": "npx -y tsc && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Veronica-Alfr/NG-Cash.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Veronica-Alfr/NG-Cash/issues"
+  },
+  "homepage": "https://github.com/Veronica-Alfr/NG-Cash#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.14",
+    "@types/node": "^18.11.9",
+    "@types/sequelize": "^4.28.14",
+    "postgres": "^3.3.2",
+    "sequelize-cli": "^6.5.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "pg": "^8.8.0",
+    "sequelize": "^6.25.6"
+  }
+}
